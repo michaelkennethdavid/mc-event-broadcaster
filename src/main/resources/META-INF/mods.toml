@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="MIT"
+
+[[mods]] #mandatory
+modId="eventbroadcaster"
+version="1.0.0"
+displayName="Event Broadcaster"
+#updateJSONURL="https://change.me.example.invalid/updates.json"
+displayURL="https://github.com/michaelkennethdavid/mc-event-broadcaster"
+#logoFile="examplemod.png"
+#credits="Thanks for this example mod goes to Java"
+authors="MK David"
+description='''
+This mod allows you to subscribe to events in Minecraft, such as when a player joins or leaves the server, and publish these events to a webhook server. This can be useful for creating custom integrations with other applications or services, or simply for keeping track of activity on your Minecraft server. With this mod, you can easily create custom notifications or triggers for any event you choose, giving you more control over your Minecraft experience.
+'''
+
+[[dependencies.examplemod]] #optional
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"
