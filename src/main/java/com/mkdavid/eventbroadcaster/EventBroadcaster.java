@@ -1,6 +1,6 @@
 package com.mkdavid.eventbroadcaster;
 
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -21,15 +21,15 @@ public class EventBroadcaster {
 	}
 
 	public void onPlayerLoggedInEvent(PlayerEvent.PlayerLoggedInEvent event) {
-		if (COMMON_CONFIG.getPlayerJoinedEvent().getEnabled() && event.getEntity() instanceof PlayerEntity) {
-			PlayerEntity player = (PlayerEntity) event.getEntity();
+		if (COMMON_CONFIG.getPlayerJoinedEvent().getEnabled()) {
+			Player player = event.getPlayer();
 			HttpClientHelper.PlayerJoinedEvent(player.getDisplayName().getString());
 		}
 	}
 
 	public void onPlayerLoggedOutEvent(PlayerEvent.PlayerLoggedOutEvent event) {
-		if (COMMON_CONFIG.getPlayerLeftEvent().getEnabled() && event.getEntity() instanceof PlayerEntity) {
-			PlayerEntity player = (PlayerEntity) event.getEntity();
+		if (COMMON_CONFIG.getPlayerLeftEvent().getEnabled()) {
+			Player player = event.getPlayer();
 			HttpClientHelper.PlayerLeftEvent(player.getDisplayName().getString());
 		}
 	}

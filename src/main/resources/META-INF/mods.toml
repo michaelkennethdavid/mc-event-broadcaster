@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[36,)"
+loaderVersion="[40,)"
 license="MIT"
 
 [[mods]] #mandatory
@@ -15,16 +15,16 @@ description='''
 This mod allows you to subscribe to events in Minecraft, such as when a player joins or leaves the server, and publish these events to a webhook server. This can be useful for creating custom integrations with other applications or services, or simply for keeping track of activity on your Minecraft server. With this mod, you can easily create custom notifications or triggers for any event you choose, giving you more control over your Minecraft experience.
 '''
 
-[[dependencies.examplemod]] #optional
+[[dependencies.eventbroadcaster]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[36,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.eventbroadcaster]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5,1.17)"
+    versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
